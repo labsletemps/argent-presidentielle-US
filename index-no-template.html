@@ -1,0 +1,228 @@
+<!-- [twig template] use '_blocks.html.twig' -->
+
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800" rel="stylesheet"> -->
+	<link rel="stylesheet" type="text/css" href="build/css/style.css?5" />
+
+</head>
+
+<body>
+
+
+
+
+	<script id="card-template" type="text/x-handlebars-template">
+		{{#each cards}}
+			<div class="col-lg-4 col-md-6 col-sm-12 card-container {{slug}}">
+				<div class="card">
+					<h5 class="candidate-name">{{name}}</h5>
+
+					<p class="money-text"><b>{{Total}}</b> millions de dollars récoltés
+					</p>
+					<div id="inline-{{slug}}" class="money-bar"></div>
+					{{#if outsideSpending}}
+					<p>(dont {{outsideSpending}} par le biais de contributions extérieures)</p>
+					{{/if}}
+
+					<div class="c3-container">
+						<div class="c3-chart" id="chart-{{slug}}" ></div>
+
+
+					</div>
+
+
+
+						<div class="panel">
+
+							<dl>
+								<hr>
+
+								<dt>Grandes contributions</dt>
+								<dd class="candidate-big"></dd>
+
+								<dt>Petites contributions (moins de 200 $)</dt>
+								<dd class="candidate-small"></dd>
+
+								<dt>Autofinancement</dt>
+								<dd class="candidate-auto"></dd>
+
+								<dt>Autres comités autorisés</dt>
+								<dd class="candidate-other"></dd>
+							</dl>
+					</div>
+				</div>
+			</div>
+		{{/each}}
+	</script>
+
+
+	<!-- Emplacement pour le contenu principal -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="text-content offset-md-3 col-md-6 offset-sd-2 col-sd-8 col-sm-12">
+				<!-- desktop -->
+				<img class="intro-img d-none d-sm-block" src="img/cover_wide.jpg" alt="Le candidat démocrate Pete Buttigieg au caucus de l’Iowa" >
+				<!-- mobile -->
+				<img class="intro-img d-block d-sm-none" src="img/cover.jpg" alt="Le candidat démocrate Pete Buttigieg au caucus de l’Iowa" >
+				<p class="source">Le candidat démocrate Pete Buttigieg au caucus de l’Iowa, le 4 février 2020.</p>
+
+				<!-- Apple a dépassé l’industrie horlogère suisse -->
+				<!-- <h1 class="intro">L’horlogerie d’Apple s’envole vers les cimes</h1> -->
+				<h1 class="intro">L’argent, le nerf de la présidentielle américaine</h1>
+				<p class="lead">Avec sa fortune estimée à 60,2 milliards de dollars, Mike Bloomberg relance le débat sur l’importance de l’argent dans les campagnes présidentielles américaines. Mais la fortune ne fait pas tout: il ne figure pas (encore) parmi les favoris. Et en 2016, Hillary Clinton disposait d’un montant supérieur à celui de Donald Trump…</p>
+
+				<p class="credits">Texte: Valérie de Graffenried<br>
+					Infographies: Pauline Martinet et Paul Ronga
+				</p>
+
+
+
+
+			</div>
+		</div>
+
+
+
+
+		<div class="row">
+			<div class="text-content offset-md-3 col-md-6 offset-sd-2 col-sd-8 col-sm-12">
+				<p>Combien de millions (ou de milliards) de dollars faut-il pour accéder à la Maison-Blanche? Aux Etats-Unis, l’argent coule plus que jamais à flots dans la campagne présidentielle. La cuvée 2020 s’annonce exceptionnelle: rien qu’en 2019 Donald Trump et le Comité national républicain ont récolté ensemble plus de 463 millions de dollars, <a href="https://www.washingtonpost.com/politics/trump-and-the-gop-raised-almost-half-a-billion-dollars-last-year--and-still-had-nearly-200-million-heading-into-2020/2020/01/03/10ba1612-2dad-11ea-bcd4-24597950008f_story.html">a calculé le <em>Washington Post</em></a>, soit plus du double de la somme dont disposaient Barack Obama et le Comité national démocrate en 2011, une année avant sa réélection.</p>
+			</div>
+		</div>
+
+		<!-- Graphique candidat -->
+
+
+		<div class="row">
+			<div class="text-content offset-md-3 col-md-6 offset-sd-2 col-sd-8 col-sm-12">
+				<p>Et puis, un autre milliardaire avance ses pions. Mike Bloomberg, philanthrope et ex-maire de New York, a fait une entrée tardive dans la campagne (novembre 2019), mais explosive.</p>
+				<p>Très vite, il a annoncé qu’il consacrerait 100 millions de dollars à des messages publicitaires, un montant déjà largement dépassé. Il aussi déclaré être prêt à «dépenser autant qu’il faudra» pour vaincre Donald Trump. Il vient de le réaffirmer après les caucus de l’Iowa, auxquels il ne participait pas, et qui se sont transformés en chaos pour les démocrates en raison d’un fiasco informatique. Ces prochains mois promettent des surprises.</p>
+				<p><strong>Lire aussi:</strong> <a href="https://www.letemps.ch/monde/vaincre-donald-trump-faut-largent">Pour vaincre Donald Trump, il faut de l’argent</a></p>
+			</div>
+		</div>
+
+		<!-- Graphique candidat -->
+		<div class="row card-container">
+
+		</div>
+
+			<div class="row">
+				<div class="text-content offset-md-3 col-md-6 offset-sd-2 col-sd-8 col-sm-12">
+
+				<h3>Bernie Sanders décolle</h3>
+
+				<p>C’est d’ailleurs à coups de publicités que Mike Bloomberg et Donald Trump se sont affrontés le 2 février, lors de l’iconique Super Bowl, grand-messe annuelle du football américain. Les deux camps ont chacun déboursé environ 10 millions de dollars pour des espaces publicitaires de quelques secondes, diffusés pendant la finale regardée par près de 100 millions de téléspectateurs. <a href="https://www.wsj.com/articles/political-ad-spending-will-approach-10-billion-in-2020-new-forecast-predicts-11559642400">Selon une estimation de GroupM</a>, environ 10 milliards de dollars pourraient au total être investis dans des campagnes publicitaires politiques en 2020. Autre milliardaire dans la course, mais bien plus discret: le démocrate Tom Steyer. En 2016, lors de la précédente campagne présidentielle, il avait dépensé plus de 90 millions de dollars pour soutenir des candidats de son camp.</p>
+				<p>L’arrivée de Mike Bloomberg dans la course relance forcément la polémique sur l’importance de l’argent dans les campagnes américaines. Mais que l’on se rassure: être fortuné – ou avoir des amis fortunés – ne fait pas tout. Mike Bloomberg, huitième fortune mondiale avec 60,2 <a href="https://www.forbes.com/profile/michael-bloomberg/#24d752a31417">milliards de dollars selon le magazine <em>Forbes</em> </a>(contre une estimation de 3 milliards pour Donald Trump), n’arrive pour l’instant qu’en 5e position dans la plupart des sondages des intentions de vote. Joe Biden, Bernie Sanders, Elizabeth Warren et Pete Buttigieg restent dans le peloton de tête des désormais 11 candidats démocrates qui espèrent décrocher l’investiture et vaincre Donald Trump le 3 novembre. <a href="https://www.washingtonpost.com/graphics/politics/2016-election/campaign-finance/">En 2016 par ailleurs, Hillary Clinton disposait d’un budget total (1,4 milliard de dollars) supérieur à celui de Donald Trump (957 millions de dollars)</a>. Cela ne lui a pas porté chance.</p>
+
+
+				<p><strong>Voir aussi:</strong> <a href="https://www.letemps.ch/images/video/monde/millions-campagnes-presidentielles?playvideo">Notre vidéo explicative</a></p>
+				<p>Selon l’organisation <a href="https://www.opensecrets.org/2020-presidential-race">OpenSecrets.org</a>, qui traque les fonds des candidats et s’appuie sur les données de la <a href="https://www.fec.gov/">Commission électorale fédérale (FEC)</a>, Donald Trump a pour l’instant engrangé 232,1 millions de dollars, contre 109,8 pour Bernie Sanders, 81,3 pour Elizabeth Warren, 75,4 pour Pete Buttigieg, 59,5 pour Joe Biden, 31,3 pour Andrew Yang et 28,7 pour Amy Klobuchar. Attention: ces chiffres sont ceux annoncés par les comités de campagne de chacun des candidats. A cela peuvent encore s’ajouter des contributions extérieures, notamment celles des partis politiques. Mike Bloomberg affiche de son côté 200,4 millions de dollars au 31 janvier 2020 et Tom Steyer, <a href="https://www.forbes.com/profile/thomas-steyer/#6cf8caa473f5">seulement 1425e fortune mondiale selon <em>Forbes</em></a>, un peu plus, 205,4 millions. Fait particulier, tous deux ont presque entièrement autofinancé leur campagne, avec des contributions extérieures qui représentent moins de 2% du total.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="offset-md-2 col-md-8 col-sd-12 card">
+				<h5>La surenchère des budgets de campagne</h5>
+				<p class="nlead">A dix mois de l’élection présidentielle, les sommes récoltées par Trump, Steyer et Bloomberg dépassent déjà les montants levés par les candidats des élections de 1996 et 2000. L’inflation n’est pas prise en compte dans ces chiffres.</p>
+				<div class="c3-chart" id="chart-historic"></div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="text-content offset-md-3 col-md-6 offset-sd-2 col-sd-8 col-sm-12">
+				<h3>Communiquer l’identité des donateurs</h3>
+				<p>Pour quadriller les Etats-Unis et partir à la rencontre des électeurs, les candidats privilégient surtout les financements de donateurs privés directs et indirects, que ce soit des individus, des entreprises ou par exemple les «Super PAC», ces comités d’action politique qui lèvent des fonds, et sont censés rester indépendants des comités des candidats et des partis. Les «Super PAC» peuvent par ailleurs aider plusieurs candidats, ou même décider de faire campagne contre un candidat.</p>
+				<p>En 2010, la Cour suprême a pris une décision en faveur de ces groupes, au nom de la liberté d’expression, garantie par le premier amendement de la Constitution: ils sont autorisés à lever un montant illimité de fonds. L’identité des donateurs doit toutefois être communiquée à la Commission électorale fédérale. Cela n’est par contre pas le cas pour les «501», d’autres groupes de récolte de fonds, à but non lucratif. La transparence a ses limites.</p>
+				<p>Les candidats misent par ailleurs peu sur les fonds publics, qui les obligeraient à plafonner leurs dépenses à 84 millions de dollars. Pour s’y retrouver dans la jungle du financement des campagnes électorales américaines, même les machettes les plus aiguisées restent vaines. Le scandale du Watergate, qui s’est soldé par la démission de Richard Nixon en 1974, avait révélé l’existence de dons secrets versés au président et provoqué l’adoption de nouvelles règles. On en est depuis revenu. En passant par des «PAC» ou des «501», tout, ou presque, reste possible.</p>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="offset-md-3 col-md-6 col-sd-12 card">
+				<h5>Mécanismes de financement des campagnes</h5>
+				<p>Qui peut soutenir et comment l’argent peut-il être dépensé?</p>
+				<img class="svg" src="img/schema-financement-r.svg?2" />
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="text-content offset-md-3 col-md-6 offset-sd-2 col-sd-8 col-sm-12">
+
+				<h3>«Seulement 39 milliardaires»</h3>
+				<p>Aux Etats-Unis, un candidat peut donc consacrer autant d’argent qu’il veut à sa campagne et puiser dans sa fortune de façon illimitée. C’est ce qui peut avantager quelqu’un comme Mike Bloomberg. Il préfère dire qu’il s’affranchit ainsi de l’influence des lobbies, puisqu’il finance sa campagne lui-même, à plus de 99%. Mais pour Bernie Sanders et Elizabeth Warren, les candidats les plus à gauche de la brochette démocrate, le milliardaire cherche ni plus ni moins à «acheter l’élection». Tous deux d’ailleurs refusent l’argent de grands donateurs et de groupes de pression. Bernie Sanders n’a pas hésité à attaquer ses rivaux lors d’un débat télévisé, en se moquant de Pete Buttigieg, «qui a seulement 39 milliardaires parmi ses donateurs, contre 44 pour Joe Biden».</p>
+
+			</div>
+		</div>
+
+		<div class="row padding-bottom">
+			<div class="offset-md-2 col-md-8 col-sd-12 card">
+				<h5>Record de dépenses publicitaires annoncé</h5>
+				<p class="nlead">Les dépenses publicitaires pour les élections présidentielles et sénatoriales devraient dépasser 10 milliards en 2020, selon GroupM, qui se fonde sur les relevés des comités de parti.</p>
+				<div class="c3-chart" id="chart-advertising"></div>
+				<p class="note">* 2020: projection.</p>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="text-content offset-md-3 col-md-6 offset-sd-2 col-sd-8 col-sm-12">
+				<p>Si l’argent coule à flots et que les réseaux sociaux (y compris en termes de manipulation) jouent un rôle de plus en plus important dans les campagnes présidentielles américaines, la participation aux grands débats télévisés démocrates a ses propres exigences, imposées par le Comité national. Pour se qualifier pour celui du 14 janvier à Des Moines (Iowa) par exemple, les candidats devaient à la fois prouver qu’ils avaient des fonds provenant d’au moins 225 000 donateurs différents répartis dans 20 Etats et réussi à dépasser les 5% d’intentions de vote dans quatre sondages nationaux.</p>
+				<p>Pour les cinq démocrates favoris (sans compter Mike Bloomberg), le quatrième trimestre de 2019 a été particulièrement fructueux. Ensemble, ils ont récolté au total plus de 115 millions de dollars, dont 34,5 millions rien que pour Bernie Sanders, un gage de popularité. Donald Trump a lui aussi eu un 4e trimestre bénéfique, avec 46 millions de dollars supplémentaires récoltés. Et cela, malgré la procédure d’impeachment lancée par les démocrates.</p>
+				<p>Bien sûr, c’est ce qui reste encore après l’argent dépensé qui est important. Et sur ce plan, le coussinet de confort de Donald Trump est bien plus cossu que ceux de ses rivaux, qui doivent avant tout chercher à se démarquer pour les primaires et les caucus et donc beaucoup dépenser (et engranger) ces prochains mois. Le président peut lui déjà avoir les yeux rivés sur le 3 novembre, alors que seuls deux candidats républicains officiels cherchent à lui voler sa place, Joe Walsh et William Weld. Sans chances de succès.</p>
+
+			</div>
+		</div>
+
+
+		<!-- Graphique Smartwatches -->
+		<div class="row">
+			<div class="infog-content offset-md-2 col-md-8 col-sm-12">
+
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="text-content offset-md-3 col-md-6 offset-sd-2 col-sd-8 col-sm-12">
+				<p style="margin-bottom: 0"><b>Sources:</b></p>
+				<ul>
+					<li>Candidats actuels: données d’<a target="_blank" href="https://www.opensecrets.org/2020-presidential-race">OpenSecrets.org</a>, basées sur les relevés diffusés par la Commission électorale fédérale le 31 janvier 2020 et couvrant la période du 1er janvier 2017 au 31 décembre 2019</li>
+					<li>Elections précédentes: <a target="_blank" href="https://www.fec.gov/">Commission électorale fédérale</a></li>
+					<li>Estimations des dépenses publicitaires: <a target="_blank" href="https://www.groupm.com/news/year-next-year-us-media-forecasts-0">GroupM</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+	<!-- <script src="lib/handlebars.min-v4.7.2.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script> -->
+
+	<!-- bundled libraries: d3js, c3js, matter etc -->
+	<script src="build/js/libraries-min.js?2"></script>
+
+	<!-- debug scrollmagic -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script> -->
+
+	<script src="build/js/main-min.js?3"></script>
+
+
+</body>
+</html>
