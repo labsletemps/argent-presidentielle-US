@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+@mixin breakpoint($class) {
+  @if $class == xxxs {
+      @media (max-width: 350px) { @content; }
+    }
+
+  @if $class == xxs {
+    @media (max-width: 400px) { @content; }
+  }
+
+  @if $class == xs {
+    @media (max-width: 500px) { @content; }
+  }
+
+  @else if $class == sm {
+    @media (max-width: 768px) { @content; }
+  }
+
+  @else if $class == md {
+    @media (max-width: 992px) { @content; }
+  }
+
+  @else if $class == lg {
+    @media (max-width: 1200px) { @content; }
+  }
+
+  @else if $class == xl {
+    @media (max-width: 1600px) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: xxs, xs, sm, md, lg, xl";
+  }
+}
